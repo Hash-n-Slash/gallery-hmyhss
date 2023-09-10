@@ -1,41 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>File Upload</title>
-</head>
-<body>
-    <h1>Upload a Picture</h1>
-    <form id="uploadForm" enctype="multipart/form-data">
-        <input type="file" name="picture" id="fileInput">
-        <button type="submit">Upload</button>
-    </form>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="NSS,nss,Nss,HMY,hmy,Hmy,Hmyhss,manjeri nss, hmynssmanjeri">
+        <meta name="description" content="HMYHSS MANJERI NSS BLOG">
+        <meta name="author" content="Yahya Riswan">
+        <meta property="og:title" content="HMYHSS NSS" />
+        <meta property="og:image" content="https://nss-hmyhss.web.app/logo.png" />
+        <meta property="og:url" content="https://nss-hmyhss.web.app" />
+        <title>GALLERY | HMYHSS | MANJERI</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" href="hmyhss.png" type="image/x-icon">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    </head>
+    <body>
+        <header>
+            <img src="hmyhss.png" alt="">
+            <div id="center">
+                <h1>HMYHSS GALLERY</h1>
+                <pre>@manjeri</pre>
+            </div>
+        </header>
+        <div id="space"></div>
 
-    <script>
-        const form = document.getElementById('uploadForm');
-        const fileInput = document.getElementById('fileInput');
 
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-
-            const formData = new FormData();
-            formData.append('picture', fileInput.files[0]);
-            fetch('/upload', {
-                method: 'POST',
-                body: formData,
-            })
-            .then(response => {
-                if (response.ok) {
-                    console.log('File uploaded successfully.');
-                } else {
-                    console.error('File upload failed.');
-                }
-            })
-            .catch(error => {
-                console.error('Error uploading file:', error);
-            });
-        });
-    </script>
-</body>
+        <div id="sports">
+            <pre><u>Sports 2k23</u></pre>
+        </div>
+        <script type="module" src="./script.js"></script>
+    </body>
 </html>
